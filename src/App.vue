@@ -1,19 +1,14 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="Logo UFFS" src="./assets/logo.png">
+
+    <home message="Bem vindos(as) ao Agrupa UFFS!" />
   </div>
 </template>
 
 <script>
-  import HelloWorld from './components/HelloWorld.vue';
-
   export default {
-    name: 'App',
-
-    components: {
-      HelloWorld
-    }
+    name: 'App'
   };
 </script>
 
@@ -25,5 +20,17 @@
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;
+  }
+
+  .btn.btn-primary {
+    border-color: darkgreen;
+    background-color: green;
+  }
+
+  .btn.btn-primary:hover,
+  .btn.btn-primary:focus {
+    border-color: darkgreen !important;
+    background-color: darkgreen !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 128, 0, 0.2) !important;
   }
 </style>
