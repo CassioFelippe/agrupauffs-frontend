@@ -1,14 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Logo UFFS" src="./assets/logo.png">
-
-    <home message="Bem vindos(as) ao Agrupa UFFS!" />
+    <router-view />
+    
+    <template v-if="initialRoute">
+      <home />
+    </template>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'App'
+    name: 'App',
+
+    computed: {
+      initialRoute() {
+        return this.$route.path === '/'
+      }
+    }
   };
 </script>
 
@@ -18,7 +26,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
+    color: #2C3E50;
     margin-top: 60px;
   }
 
