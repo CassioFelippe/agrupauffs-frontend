@@ -48,4 +48,8 @@
   .login-buttons {
     margin-top: 2em;
   }
+
+  img {
+    margin-bottom: 2em;
+  }
 </style>

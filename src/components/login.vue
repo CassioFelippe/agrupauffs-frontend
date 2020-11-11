@@ -17,6 +17,14 @@
           Entrar
         </b-button>
       </b-col>
+
+      <b-col cols="12" class="text-left">
+        <b-col cols="1">
+          <b-button @click="voltar" class="btn btn-primary">
+            <font-awesome-icon icon="long-arrow-alt-left" />
+          </b-button>
+        </b-col>
+      </b-col>
     </b-row>
   </div>
 </template>
@@ -25,7 +33,13 @@
   export default {
     name: 'login',
 
-    mounted() {}
+    mounted() {},
+
+    methods: {
+      voltar() {
+        this.$router.back();
+      }
+    }
   };
 </script>
 
