@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import App from '@/App.vue'
 import home from '@/components/home.vue'
 import login from '@/components/login.vue'
+import cad_usu from '@/components/cad_usu.vue'
 import router from '@/router.js'
 
 library.add(fas)
@@ -19,6 +20,7 @@ Vue.config.productionTip = false
 Vue.component('home', home)
 Vue.component('login', login)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.component('cad_usu', cad_usu)
 
 Vue.use(BootstrapVue)
 Vue.use(Router);

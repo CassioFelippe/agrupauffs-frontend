@@ -14,7 +14,7 @@
         <b-button block variant="primary" @click="to('login')">
           Login
         </b-button>
-        <b-button block variant="primary">
+        <b-button block variant="primary" @click="to('cad_usu')">
           Cadastrar
         </b-button>
       </b-col>
