@@ -11,6 +11,7 @@ import App from '@/App.vue'
 import home from '@/components/home.vue'
 import login from '@/components/login.vue'
 import cad_usu from '@/components/cad_usu.vue'
+import chat from '@/components/chat.vue'
 import router from '@/router.js'
 
 library.add(fas)
@@ -21,6 +22,7 @@ Vue.component('home', home)
 Vue.component('login', login)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('cad_usu', cad_usu)
+Vue.component('chat', chat)
 
 Vue.use(BootstrapVue)
 Vue.use(Router);
