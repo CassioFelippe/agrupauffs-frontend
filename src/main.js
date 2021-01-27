@@ -3,16 +3,18 @@ import 'bootstrap/dist/css/bootstrap.css'
 import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue'
 import Router from 'vue-router'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fas } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-
 import App from '@/App.vue'
 import home from '@/components/home.vue'
 import login from '@/components/login.vue'
 import cad_usu from '@/components/cad_usu.vue'
 import chat from '@/components/chat.vue'
 import router from '@/router.js'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 library.add(fas)
 
@@ -25,16 +27,11 @@ Vue.component('cad_usu', cad_usu)
 Vue.component('chat', chat)
 
 Vue.use(BootstrapVue)
-Vue.use(Router);
+Vue.use(Router)
+Vue.use(VueAxios, axios)
 
 Vue.mixin({
   methods: {
-    to(route) {
-      this.$router.push(route).then(() => {
-        this.$router.go()
-      });
-    },
-
     mobile() {
       const userAgent = navigator.userAgent;
       return userAgent.match(/Android/i)
@@ -44,6 +41,21 @@ Vue.mixin({
           || userAgent.match(/iPod/i)
           || userAgent.match(/BlackBerry/i)
           || userAgent.match(/Windows Phone/i);
+    },
+
+    validateEmail(email) {
+      const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(email).toLowerCase());
+    },
+    
+    goback() {
+      this.$router.back();
+    },
+
+    redirect(route) {
+      this.$router.push(route || '/').catch(e => e).then(() => {
+        this.$router.go();
+      });
     }
   },
 })

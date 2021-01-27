@@ -1,7 +1,8 @@
 <template>
   <div>
     <b-row class="text-center">
-      <b-col :cols="display_chat ? 9 : 11" class="page-wrapper">
+      <!-- <b-col :cols="display_chat ? 9 : 11" class="page-wrapper"> -->
+      <b-col class="page-wrapper">
         <img alt="Logo UFFS" src="@/assets/logo.png">
         
         <h1>{{message}}</h1>
@@ -12,10 +13,10 @@
           <b-col cols="12" sm="12" md="3" lg="3">&nbsp;</b-col>
 
           <b-col cols="12" sm="12" md="6" lg="6" class="login-buttons">
-            <b-button block variant="primary" @click="to('login')">
+            <b-button block variant="primary" @click="redirect('/login')">
               Login
             </b-button>
-            <b-button block variant="primary" @click="to('cad_usu')">
+            <b-button block variant="primary" @click="redirect('/cad_usu')">
               Cadastrar
             </b-button>
           </b-col>
@@ -24,12 +25,12 @@
         </b-row>
       </b-col>
 
-      <b-col :cols="display_chat ? 3 : 1" class="chat-wrapper">
+      <!-- <b-col :cols="display_chat ? 3 : 1" class="chat-wrapper">
         <legend>
           <a @click="toggle_chat">{{chat_icon}}&nbsp;Chat</a>
         </legend>
         <chat class="chat" :hidden="!display_chat" />
-      </b-col>
+      </b-col> -->
     </b-row>
   </div>
 
