@@ -47,6 +47,14 @@
     margin-bottom: 1.5em;
   }
 
+  a {
+    color: #299640;
+  }
+
+  a:hover {
+    color: #1C4328;
+  }
+
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;

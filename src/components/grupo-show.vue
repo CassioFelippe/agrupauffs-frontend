@@ -67,9 +67,14 @@
         return `${day < 10 ? '0'+day : day}/${month < 10 ? '0'+(month+1) : month+1}/${year} ${hour}h${minute}`;
       },
       parseHour(date) {
-        date = this.parseDate(date);
+        try {
 
-        return date.split(' ')[1];
+          date = this.parseDate(date);
+
+          return date.split(' ')[1];
+        } catch (e) {
+          return null;
+        }
       }
     },
 

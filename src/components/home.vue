@@ -1,14 +1,19 @@
 <template>
-  <div>
+  <div class="container">
     <b-row class="text-center">
       <!-- <b-col :cols="display_chat ? 9 : 11" class="page-wrapper"> -->
       <b-col class="page-wrapper">
-        <img alt="Logo UFFS" src="@/assets/logo.png">
+        <img alt="Logo UFFS" src="@/../public/logo.png" style="height:20%">
         
         <h1>{{message}}</h1>
 
         <!-- TODO adicionar descrição -->
-        <h3 class="sub-title">-- Descrição da aplicação aqui --</h3>
+        <h4 class="sub-title">
+          O Agrupa UFFS é um site que lhe permite entrar em grupos de estudos da UFFS<br>
+          ou até mesmo criar o seu próprio grupo de estudos!<br>
+          Este projeto é desenvolvido por estudantes da UFFS em código aberto.<br>
+          Você pode apoiar o projeto clicando <a :href="packagejson.homepage" target="_blank">aqui</a>.<br>
+        </h4>
         <b-row class="text-center">
           <b-col cols="12" sm="12" md="3" lg="3">&nbsp;</b-col>
 

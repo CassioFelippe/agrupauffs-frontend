@@ -1,7 +1,8 @@
 {
   "name": "agrupauffs",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://github.com/rodrigorechh/agrupa-uffs-web-service",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

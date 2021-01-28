@@ -60,6 +60,12 @@ Vue.mixin({
       });
     }
   },
+
+  data() {
+    return {
+      packagejson: require('@/../package.json')
+    }
+  }
 })
 
 new Vue({
