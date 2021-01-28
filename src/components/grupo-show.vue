@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <b-row class="text-center">
       <b-col cols="12" class="title">
         <h1>{{model.nomeDoGrupo}}</h1>
@@ -10,7 +10,9 @@
         </b-col>
         <b-col cols="12">
           <ul>
-            <li v-for="(g, i) in model.grupoEstudoCurso" :key="'cur'+i">{{g.curso.nomeCurso}}</li>
+            <li v-for="(g, i) in model.grupoEstudoCurso" :key="'cur'+i">
+              {{g.curso.nomeCurso}}
+            </li>
           </ul>
         </b-col>
         <b-col cols="12">
@@ -18,18 +20,24 @@
         </b-col>
         <b-col cols="12">
           <ul>
-            <li v-for="(g, i) in model.grupoEstudoHorario" :key="'hor'+i">{{parseDate(g.dataDeCriacaoDoRegistro)}} TODO isso aqui é a hora de criação, usar hora marcada</li>
+            <li v-for="(g, i) in model.grupoEstudoHorario" :key="'hor'+i">
+              {{parseDate(g.dataDeCriacaoDoRegistro)}} TODO isso aqui é a hora de criação, usar hora marcada
+            </li>
           </ul>
         </b-col>
         <b-col cols="12">
-          <h3>Participantes</h3>
+          <h3>Membros</h3>
         </b-col>
         <b-col cols="12">
           <ul>
-            <li v-for="(g, i) in model.grupoEstudoUsuario" :key="'usu'+i">{{g.usuario.nome}}</li>
+            <li v-for="(g, i) in model.grupoEstudoUsuario" :key="'usu'+i">
+              {{g.usuario.nome}} <b-badge v-if="g.administrador" variant="dark">admin</b-badge>
+            </li>
           </ul>
         </b-col>
       </b-col>
+
+      <go-back />
     </b-row>
   </div>
 </template>
@@ -72,5 +80,9 @@
 <style scoped>
   .title {
     margin-bottom: 2em;
+  }
+
+  .badge {
+    margin-left: .5em;
   }
 </style>

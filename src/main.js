@@ -8,6 +8,7 @@ import home from '@/components/home.vue'
 import login from '@/components/login.vue'
 import cad_usu from '@/components/cad_usu.vue'
 import chat from '@/components/chat.vue'
+import goback from '@/components/go-back.vue'
 import router from '@/router.js'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
@@ -25,6 +26,7 @@ Vue.component('login', login)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('cad_usu', cad_usu)
 Vue.component('chat', chat)
+Vue.component('go-back', goback)
 
 Vue.use(BootstrapVue)
 Vue.use(Router)

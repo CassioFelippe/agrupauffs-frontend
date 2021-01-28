@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <b-row class="justify-content-md-center">
       <b-col cols="12" class="route-icon">
         <font-awesome-icon icon="user" />
@@ -18,13 +18,9 @@
         </b-button>
       </b-col>
 
-      <b-col cols="12" class="text-left">
-        <b-col cols="1">
-          <b-button @click="goback" class="btn btn-primary">
-            <font-awesome-icon icon="long-arrow-alt-left" />
-          </b-button>
-        </b-col>
-      </b-col>
+      <b-col cols="12">&nbsp;</b-col>
+
+      <go-back />
     </b-row>
   </div>
 </template>

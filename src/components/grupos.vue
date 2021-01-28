@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <b-row class="text-center">
       <b-col cols="12" class="title">
         <h1>Grupos</h1>
@@ -12,6 +12,10 @@
           <b-button :href="'/grupos/'+g.idGrupo" variant="primary">Acessar</b-button>
         </b-card>
       </b-col>
+
+      <b-col cols="12">&nbsp;</b-col>
+
+      <go-back />
     </b-row>
   </div>
 

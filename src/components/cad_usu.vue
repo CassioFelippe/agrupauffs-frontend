@@ -1,36 +1,34 @@
 <template>
   <div class="container">
     <h1>Novo Usuário</h1>
-    <div class="form-todo form-group">
-      <p>
+    <b-row>
+      <b-col cols="12">
         <input placeholder="Nome" type="text" name="usuario" class="form-control" v-model="usuario.nome" />
-      </p>
-      <p>
-        <input placeholder="Login" type="text" name="login"  class="form-control" v-model="usuario.login" />
-      </p>
-      <p>
-        <input placeholder="Email" type="email" name="email"  class="form-control" v-model="usuario.email" />
-      </p>
-      <p>
-        <input placeholder="Senha" type="password" name="senha" class="form-control" v-model="usuario.senha" />
-      </p>
-      <p>
-        <input placeholder="Confirmação Senha" type="password" name="confirmacao-senha" class="form-control" v-model="usuario.confirmacaoSenha" />
-      </p>
-      <p>
-        <textarea placeholder="Cursos Relacionados" name="cursos" class="form-control" v-model="usuario.cursos" />
-      </p>
-
-      <button @click="create" type="submit" class="btn btn-primary">Cadastrar</button>
-
-      <b-col cols="12" class="text-left">
-        <b-col cols="3">
-          <b-button @click="goback" class="btn btn-primary">
-            <font-awesome-icon icon="long-arrow-alt-left" />
-          </b-button>
-        </b-col>
       </b-col>
-    </div>
+      <b-col cols="12">
+        <input placeholder="Login" type="text" name="login"  class="form-control" v-model="usuario.login" />
+      </b-col>
+      <b-col cols="12">
+        <input placeholder="Email" type="email" name="email"  class="form-control" v-model="usuario.email" />
+      </b-col>
+      <b-col cols="12">
+        <input placeholder="Senha" type="password" name="senha" class="form-control" v-model="usuario.senha" />
+      </b-col>
+      <b-col cols="12">
+        <input placeholder="Confirmação Senha" type="password" name="confirmacao-senha" class="form-control" v-model="usuario.confirmacaoSenha" />
+      </b-col>
+      <b-col cols="12">
+        <textarea placeholder="Cursos Relacionados" name="cursos" class="form-control" v-model="usuario.cursos" />
+      </b-col>
+
+      <b-col cols="12">&nbsp;</b-col>
+      
+      <b-col cols="12" class="text-center">
+        <button @click="create" type="submit" class="btn btn-primary">Cadastrar</button>
+      </b-col>
+
+      <go-back />
+    </b-row>
   </div>
 </template>
 
