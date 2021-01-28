@@ -21,7 +21,7 @@
         <b-col cols="12">
           <ul>
             <li v-for="(g, i) in model.grupoEstudoHorario" :key="'hor'+i">
-              {{parseDate(g.dataDeCriacaoDoRegistro)}} TODO isso aqui é a hora de criação, usar hora marcada
+              {{parseHour(g.horaMarcada)}}
             </li>
           </ul>
         </b-col>
@@ -65,6 +65,11 @@
         minute = time.split(':')[1];
 
         return `${day < 10 ? '0'+day : day}/${month < 10 ? '0'+(month+1) : month+1}/${year} ${hour}h${minute}`;
+      },
+      parseHour(date) {
+        date = this.parseDate(date);
+
+        return date.split(' ')[1];
       }
     },
 
