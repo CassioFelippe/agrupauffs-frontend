@@ -48,7 +48,13 @@
     data() {
       return {
         message: 'Bem vindos(as) ao Agrupa UFFS!',
-        display_chat: true
+        display_chat: true,
+        recursos: [
+          { name: 'Grupos', route: 'grupos' },
+          { name: 'Cursos', route: 'cursos' },
+          { name: 'Grupos', route: 'grupos' }
+        ],
+        loggedin: true // TODO implement it 
       }
     },
 

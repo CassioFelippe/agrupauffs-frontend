@@ -2,7 +2,7 @@
   <div id="app">
     <b-col cols="12" class="agrupa-header">
       <b-col cols="4" class="text-left">
-        <b-button @click="redirect('/')" class="btn btn-primary">
+        <b-button @click="redirect('/grupos')" class="btn btn-primary">
           <font-awesome-icon icon="home" />&nbsp;HOME
         </b-button>
       </b-col>
@@ -83,6 +83,23 @@
 
   .agrupa-body {
     margin: 3.5em 0 5% 0;
+  }
+
+  .custom-control-label:hover {
+    cursor: pointer;
+  }
+
+  .custom-control-input:checked ~ .custom-control-label:before {
+    border-color: green;
+    background-color: green;
+  }
+
+  .custom-control-input:focus:not(:checked) ~ .custom-control-label:before {
+    border-color: green;
+  }
+
+  .custom-control-input:focus ~ .custom-control-label:before {
+    box-shadow: 0 0 0 0.2rem rgba(0, 96, 88, 0.25);
   }
 
   /* mobile */
