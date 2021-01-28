@@ -11,15 +11,22 @@
       </b-col>
       <b-col cols="9">
         <b-row class="text-center">
+          <b-col cols="12" class="text-right">
+            <b-button href="/grupo/new" variant="primary">
+              <font-awesome-icon icon="plus" />&nbsp;Criar
+            </b-button>
+          </b-col>
           <b-col cols="12" class="title">
             <h1>Grupos</h1>
           </b-col>
           <b-col cols="12" md="6" lg="6" class="page-wrapper" v-for="g in filteredGrupos" :key="g.id">
             <b-card :title="g.nomeDoGrupo" tag="article" class="mb-2">
               <b-card-text>
-                {{g.descricao}}
+                {{g.descricao}}<br>
+                <b-badge v-if="g.privado" variant="dark">privado</b-badge>
+                <b-badge v-else variant="light">aberto</b-badge>
               </b-card-text>
-              <b-button :href="'/grupos/'+g.idGrupo" variant="primary">Acessar</b-button>
+              <b-button :href="'/grupo/show/'+g.idGrupo" variant="primary">Acessar</b-button>
             </b-card>
           </b-col>
         </b-row>

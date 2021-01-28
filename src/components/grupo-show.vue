@@ -4,6 +4,11 @@
       <b-col cols="12" class="title">
         <h1>{{model.nomeDoGrupo}}</h1>
       </b-col>
+      <b-col cols="12" class="text-right">
+        <b-button :href="'/grupo/edit/'+model.idGrupo" variant="primary">
+          <font-awesome-icon icon="edit" />&nbsp;Editar
+        </b-button>
+      </b-col>
       <b-col cols="12" class="page-wrapper text-left">
         <b-col cols="12">
           <h3>Cursos</h3>
@@ -46,7 +51,7 @@
   import http from '@/services/http'
 
   export default {
-    name: 'grupo',
+    name: 'grupo-show',
 
     data() {
       return {

@@ -3,7 +3,9 @@ import home from '@/components/home.vue'
 import login from '@/components/login.vue'
 import cad_usu from '@/components/cad_usu.vue'
 import grupos from '@/components/grupos.vue'
-import grupo from '@/components/grupo-show.vue'
+import gruposhow from '@/components/grupo-show.vue'
+import gruponew from '@/components/grupo-new.vue'
+import grupoedit from '@/components/grupo-edit.vue'
 
 const router = new Router({
   mode: 'history',
@@ -13,7 +15,9 @@ const router = new Router({
     { path: '/login', component: login },
     { path: '/cad_usu', component: cad_usu },
     { path: '/grupos', component: grupos },
-    { path: '/grupos/:id', component: grupo }
+    { path: '/grupo/show/:id', component: gruposhow },
+    { path: '/grupo/edit/:id', component: grupoedit },
+    { path: '/grupo/new', component: gruponew }
   ]
 })
 

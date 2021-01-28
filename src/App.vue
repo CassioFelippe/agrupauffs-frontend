@@ -43,7 +43,7 @@
     z-index: -1;
   }
 
-  input, textarea {
+  input, textarea, .custom-control.custom-switch {
     margin-bottom: 1.5em;
   }
 

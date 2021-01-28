@@ -12,6 +12,9 @@ import goback from '@/components/go-back.vue'
 import router from '@/router.js'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import grupos from '@/components/grupos.vue'
+import gruposhow from '@/components/grupo-show.vue'
+import gruponew from '@/components/grupo-new.vue'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
@@ -27,6 +30,9 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('cad_usu', cad_usu)
 Vue.component('chat', chat)
 Vue.component('go-back', goback)
+Vue.component('grupos', grupos)
+Vue.component('grupo-show', gruposhow)
+Vue.component('grupo-new', gruponew)
 
 Vue.use(BootstrapVue)
 Vue.use(Router)
